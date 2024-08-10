@@ -1,17 +1,28 @@
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        alphabets = "abcdefghijklmnopqrstuvwxyz"
-        nums = "0123456789"
-        valid_str = ""
-        for i in s.lower():
-            if i in alphabets or i in nums:
-                valid_str = valid_str + i
-        
-        reverse_str = ""
+        # using two pointer approach
+        lpointer, rpointer = 0, len(s) - 1
+        if s == " ":
+            return True
 
-        for j in range(len(valid_str)-1, -1, -1):
-            reverse_str = reverse_str + valid_str[j]
+        while lpointer < rpointer:
+            while lpointer < rpointer and self.isAlphaNumeric(s[lpointer]) == False:
+                lpointer += 1
+            while rpointer > lpointer and self.isAlphaNumeric(s[rpointer]) == False:
+                rpointer -= 1
+
+            if (s[lpointer].lower() != s[rpointer].lower()):
+                return False
+            
+            lpointer, rpointer = lpointer + 1, rpointer -1
         
-        return reverse_str == valid_str
+        return True
+
+
+    def isAlphaNumeric(self, charr):
+        charr = charr.lower()
+        return ((ord("a") <= ord(charr) and ord(charr) <= ord("z")) or
+                ord("0") <= ord(charr) <= ord("9"))
+        
         
         
