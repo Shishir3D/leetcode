@@ -2,8 +2,6 @@ class Solution:
     def isPalindrome(self, s: str) -> bool:
         # using two pointer approach
         lpointer, rpointer = 0, len(s) - 1
-        if s == " ":
-            return True
 
         while lpointer < rpointer:
             while lpointer < rpointer and self.isAlphaNumeric(s[lpointer]) == False:
