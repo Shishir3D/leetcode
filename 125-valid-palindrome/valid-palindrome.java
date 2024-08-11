@@ -7,8 +7,8 @@ class Solution {
         char z = 'z';
         char zero ='0';
         char nine = '9';
-        String fwStr = "";
-        String bwStr = "";
+        StringBuilder fwStr = new StringBuilder();
+        // StringBuilder bwStr = new StringBuilder();
 
         for (int i = 0 ; i < n ; i++){
             ch = s.charAt(i);
@@ -19,12 +19,15 @@ class Solution {
                 ( (int) ch >= (int) zero &&
                 (int) ch <= (int) nine )
                 ) {
-                    fwStr = fwStr + ch;
-                    bwStr = ch + bwStr;
+                    fwStr.append(ch);
                 }            
         }
 
-        return fwStr.equals(bwStr);
+        StringBuilder bwStr = new StringBuilder(fwStr);
+        
+        // Compare fwStr with its reverse
+        return fwStr.toString().equals(bwStr.reverse().toString());
+
 
     }
 }
