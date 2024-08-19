@@ -1,24 +1,24 @@
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        # Initialize the stack with the initial state
-        stack = [("", 0, 0)]
-        result = []
+        res = []
+        sol = []
 
-        # Perform DFS using the stack
-        while stack:
-            current_string, open_count, close_count = stack.pop()
-
-            # If the current string is a valid combination, add it to the result
-            if open_count == n and close_count == n:
-                result.append(current_string)
-
-            # If we can add an opening parenthesis, do it
-            if open_count < n:
-                stack.append((current_string + "(", open_count + 1, close_count))
-
-            # If we can add a closing parenthesis, do it
-            if close_count < open_count:
-                stack.append((current_string + ")", open_count, close_count + 1))
-
-        return result
+        def backtrack(opened, closed, sol):
+            if closed >= n and opened >= n:
+                ans = ''.join(sol)
+                res.append(ans)
+                return
             
+            if opened < n:
+                sol.append('(')
+                backtrack(opened + 1, closed, sol[:])
+                sol.pop()
+            
+            if closed < opened:
+                sol.append(')')
+                backtrack(opened, closed+1, sol[:])
+                sol.pop()
+            
+        backtrack(0,0, [])
+        return res
+    
