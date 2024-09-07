@@ -1,26 +1,31 @@
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        mp = {}
-        res = []
-        frequency = []
+        counter = defaultdict(int)
+        n = len(nums)
+        ans = []
 
-        for index, value in enumerate(nums):
-            if value not in mp:
-                mp[value] = 1
-            else:
-                mp[value] = mp[value] + 1
+        # put the elements in list as keys and their frequency as values
+        for num in nums:
+            counter[num] += 1
 
-        for i in range(k):
-            maxx = -100001
-            for key, value in mp.items():
-                if value > maxx:
-                    maxx = value
-                    max_key = key
+        res = [[] for i in range(n + 1)]
 
-            mp[max_key] = -100003
-            res.append(max_key)
+        # put the elments in an index which is equal to the element's frequency
+        for key, value in counter.items():
+            res[value].append(key)
+        
+        for i in range(n, -1, -1):
+            if res[i]:
+                ans.extend(res[i])
+                if len(ans) == k:
+                    return ans
             
 
-        return res
 
 
+
+
+        
+
+
+        
