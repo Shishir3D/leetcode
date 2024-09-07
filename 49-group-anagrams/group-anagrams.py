@@ -1,8 +1,5 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        res = []
-        ans = []
-
         #store sorted elements as keys and list of elements as values
         #{'aet' : ['ate', 'eat', 'tea']}
         mp_group = defaultdict(list)
