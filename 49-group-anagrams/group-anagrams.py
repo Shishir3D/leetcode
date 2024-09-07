@@ -1,19 +1,20 @@
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         res = []
-        mp = defaultdict(list)
+        ans = []
 
-        for index, strr in enumerate(strs):
-            sorted_str = "".join(sorted(strr))     
-            mp[sorted_str].append(index)
+        #store sorted elements as keys and list of elements as values
+        #{'aet' : ['ate', 'eat', 'tea']}
+        mp_group = defaultdict(list)
 
-        for values in mp.values():
-            ans = []
-            for i in values:
-                ans.append(strs[i])
-            res.append(ans)
+        for strr in strs:
+            mp_group[str(sorted(strr))].append(strr)
         
-        return res
+        return mp_group.values()
+
+
+
+
 
 
         
