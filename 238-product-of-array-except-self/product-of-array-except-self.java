@@ -6,7 +6,6 @@ class Solution {
         // elements in prefix is the same as suffix but have product of elements to the right (not inc)
         // multiply suffix and prefix at every index to get the answer
 
-
         ArrayList<Integer> suffix = new ArrayList<>();
         ArrayList<Integer> prefix = new ArrayList<>();
         int n = nums.length;
@@ -28,8 +27,6 @@ class Solution {
         for (int l = 0; l < n; l++) {
             result[l] = suffix.get(l) * prefix.get(l);
         }
-        System.out.println(suffix);
-        System.out.println(prefix);
 
         return result;
     }
