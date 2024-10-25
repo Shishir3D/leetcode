@@ -1,17 +1,16 @@
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        
-        bprice = prices[0]
-        profit = 0
+        left_pointer = 0
+        right_pointer = 1
+        maxx = 0
 
-        for price in prices[1:]:
-            if price < bprice:
-                bprice = price
-            
-            profit = max(profit, price - bprice)
+        for i in range(len(prices) - 1):
+            if prices[right_pointer] < prices[left_pointer]:
+                left_pointer = right_pointer
+                right_pointer += 1
+            else:
+                maxx = max(prices[right_pointer] - prices[left_pointer], maxx)
+                right_pointer += 1
         
-        return profit
 
-        
-
-            
+        return (maxx)
