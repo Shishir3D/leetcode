@@ -18,4 +18,12 @@ All of my leet code Solutions
 |  |
 | ------- |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Shishir3D/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
+## Linked List
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/Shishir3D/leetcode/tree/master/0206-reverse-linked-list) |
+## Recursion
+|  |
+| ------- |
+| [0206-reverse-linked-list](https://github.com/Shishir3D/leetcode/tree/master/0206-reverse-linked-list) |
 <!---LeetCode Topics End-->
