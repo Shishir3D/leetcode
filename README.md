@@ -9,6 +9,7 @@ All of my leet code Solutions
 | [0033-search-in-rotated-sorted-array](https://github.com/Shishir3D/leetcode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/Shishir3D/leetcode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/Shishir3D/leetcode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
+| [0217-contains-duplicate](https://github.com/Shishir3D/leetcode/tree/master/0217-contains-duplicate) |
 ## Binary Search
 |  |
 | ------- |
@@ -33,8 +34,13 @@ All of my leet code Solutions
 |  |
 | ------- |
 | [0141-linked-list-cycle](https://github.com/Shishir3D/leetcode/tree/master/0141-linked-list-cycle) |
+| [0217-contains-duplicate](https://github.com/Shishir3D/leetcode/tree/master/0217-contains-duplicate) |
 ## Two Pointers
 |  |
 | ------- |
 | [0141-linked-list-cycle](https://github.com/Shishir3D/leetcode/tree/master/0141-linked-list-cycle) |
+## Sorting
+|  |
+| ------- |
+| [0217-contains-duplicate](https://github.com/Shishir3D/leetcode/tree/master/0217-contains-duplicate) |
 <!---LeetCode Topics End-->
